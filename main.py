@@ -1,5 +1,6 @@
 from fastapi import FastAPI
 from rag import rag_search
+from agent_2 import review_generator
 app = FastAPI()
 
 
@@ -9,10 +10,7 @@ def ask(q: str):
     is_comparison = "compare" in ques or "vs" in ques or "compared" in ques
 
     if is_comparison:
-        return {
-            "question" : ques,
-            "answer" : "implementation the agent running......."
-        }
+        return review_generator(ques)
     else:
         return rag_search(ques)
     

@@ -1,13 +1,8 @@
 from db_model import engine
 import pandas as pd
-from openai import OpenAI
-from dotenv import load_dotenv
 import re
-import os
 
 
-load_dotenv()
-api = OpenAI(api_key=os.getenv("open_api"))
 
 def data_extractor(question):
 
