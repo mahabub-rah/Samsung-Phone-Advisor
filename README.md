@@ -5,7 +5,7 @@ The system combines **web scraping**, **PostgreSQL**, **FastAPI**, and **RAG[Ret
 
 ## Features
 
-**Scrapes Real Data** — Automatically collects 20–30 Samsung smartphone specs (from startech).  
+**Scrapes Real Data** — Automatically collects Samsung smartphone specs (from startech).  
 **Stores in PostgreSQL** — Saves structured data (model name, release date, display, battery, camera, RAM, storage, price).  
 **RAG Module** — Retrieves exact phone specifications from the database.  
 **Multi-Agent System** —  
@@ -18,8 +18,9 @@ The system combines **web scraping**, **PostgreSQL**, **FastAPI**, and **RAG[Ret
 ![Flow Chart](flow_chart/diagram.png)
 
 ## Project Structure
-
-|── data/
+```
+project/
+├── data/
 │   └── data.csv        # Scraping dataset
 ├── agent_1.py          # Data extraction agent
 ├── agent_2.py          # Review generation agent
@@ -27,10 +28,21 @@ The system combines **web scraping**, **PostgreSQL**, **FastAPI**, and **RAG[Ret
 ├── final_scrape.py     # Main scraping module
 ├── main.py             # FastAPI application entry point
 ├── rag.py              # RAG search functionality
-└── scrapes.py          # Primary scraping      
+└── scrapes.py          # Primary scraping
+```
 
 ## Installation
 
+First set your
+```
+git clone https://github.com/mahabub-rah/Samsung-Phone-Advisor.git
+cd Samsung-Phone-Advisor
+pip install -r requirements.txt
+python scrapes.py
+python final_scrape.py
+python db_model.py
+uvicorn main:app --reload
+```
 
 
 

@@ -3,7 +3,7 @@ from sqlalchemy import Column, Integer, String, create_engine
 from sqlalchemy.orm import sessionmaker, declarative_base
 
 #make the db file
-db_url = "postgresql+psycopg2://postgres:root@localhost:5432/samsung_db"
+db_url = "postgresql+psycopg2://postgres:root@localhost:5432/samsung_db"  ##change it with our own
 Base = declarative_base()
 engine = create_engine(db_url)
 SessionLocal = sessionmaker(autocommit = False, autoflush= False, bind =engine)
