@@ -13,8 +13,7 @@ def rag_search(question):
     r'(?:fold|flip)\s*\d+|'          # fold 7, flip 6  
     r'[a-z]\d{2,}\s*(?:plus|ultra|edge|fe|pro)?'  # a15, s24 ultra, m14 pro
     r')\s*(?:4g|5g)?',  # network 
-    q
-)
+    q)
     target_model = model_match.group(1) if model_match else None
     
     for name in df["model_name"]:
