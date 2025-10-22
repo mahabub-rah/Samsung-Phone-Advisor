@@ -29,7 +29,7 @@ The system combines **web scraping**, **PostgreSQL**, **FastAPI**, and **RAG[Ret
 ├── rag.py              # RAG search functionality
 └── scrapes.py          # Primary scraping      
 
-
+## Installation
 
 
 
