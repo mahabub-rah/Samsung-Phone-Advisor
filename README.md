@@ -33,11 +33,19 @@ project/
 
 ## Installation
 
-First set your
+
+
 ```
 git clone https://github.com/mahabub-rah/Samsung-Phone-Advisor.git
 cd Samsung-Phone-Advisor
 pip install -r requirements.txt
+````
+First create a database on your postgresql. Then change the file in db_meal 
+````
+db_url = "postgresql+psycopg2://user;password@localhost:5432/your_database_name" #update your own data in db_model.py
+`````
+Again run those file
+````
 python scrapes.py
 python final_scrape.py
 python db_model.py
